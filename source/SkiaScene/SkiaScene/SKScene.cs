@@ -6,7 +6,7 @@ namespace SkiaScene
     public class SKScene : ISKScene
     {
         protected readonly ISKSceneRenderer _sceneRenderer;
-        protected SKMatrix Matrix = SKMatrix.MakeIdentity();
+        protected SKMatrix Matrix = SKMatrix.CreateIdentity();
 
         protected const float DefaultMaxScale = 8;
         protected const float DefaultMinScale = 1f / 8;
@@ -18,7 +18,7 @@ namespace SkiaScene
 
         public void Render(SKCanvas canvas)
         {
-            canvas.Concat(ref Matrix);
+            canvas.Concat(in Matrix);
             var center = GetCenter();
             var angleInRadians = GetAngleInRadians();
             var scale = GetScale();
@@ -38,7 +38,7 @@ namespace SkiaScene
                 return;
             }
             var resultPoint = invertedMatrix.MapVector(vector.X, vector.Y);
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeTranslation(resultPoint.X, resultPoint.Y));
+            Matrix = Matrix.PreConcat(SKMatrix.CreateTranslation(resultPoint.X, resultPoint.Y));
             if (CenterBoundary.IsEmpty)
             {
                 return;
@@ -47,7 +47,7 @@ namespace SkiaScene
             if (!CenterBoundary.Contains(center))
             {
                 //rollback
-                SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeTranslation(-resultPoint.X, -resultPoint.Y));
+                Matrix = Matrix.PreConcat(SKMatrix.CreateTranslation(-resultPoint.X, -resultPoint.Y));
             }
         }
         
@@ -55,26 +55,26 @@ namespace SkiaScene
         {
             var center = GetCenter();
             SKPoint diff = center - point;
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeTranslation(diff.X, diff.Y));
+            Matrix = Matrix.PreConcat(SKMatrix.CreateTranslation(diff.X, diff.Y));
         }
         
         public void Rotate(SKPoint point, float radians)
         {
             var currentAngle = GetAngleInRadians();
             var angleDiff = radians - currentAngle;
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeRotation(angleDiff, point.X, point.Y));
+            Matrix = Matrix.PreConcat(SKMatrix.CreateRotation(angleDiff, point.X, point.Y));
         }
 
         public void RotateByRadiansDelta(SKPoint point, float radiansDelta)
         {
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeRotation(radiansDelta, point.X, point.Y));
+            Matrix = Matrix.PreConcat(SKMatrix.CreateRotation(radiansDelta, point.X, point.Y));
         }
 
         public void Zoom(SKPoint point, float scale)
         {
             var currentScale = GetScale();
             var scaleFactor = scale / currentScale;
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeScale(scaleFactor, scaleFactor, point.X, point.Y));
+            Matrix = Matrix.PreConcat(SKMatrix.CreateScale(scaleFactor, scaleFactor, point.X, point.Y));
         }
         
         public void ZoomByScaleFactor(SKPoint point, float scaleFactor)
@@ -93,7 +93,8 @@ namespace SkiaScene
                     return;
                 }
             }
-            SKMatrix.PreConcat(ref Matrix, SKMatrix.MakeScale(scaleFactor, scaleFactor, point.X, point.Y));
+
+            Matrix = Matrix.PreConcat(SKMatrix.CreateScale(scaleFactor, scaleFactor, point.X, point.Y));
         }
 
 
