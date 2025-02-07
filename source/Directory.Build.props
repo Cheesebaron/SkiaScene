@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/Cheesebaron/SkiaScene</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <authors>Ondrej Kunc</authors>
+    <owners>Ondrej Kunc</owners>
+    <tags>skiascene,xamarin,graphics,ios,android,uwp,cross-platform,skiasharp</tags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/Cheesebaron/SkiaScene</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+</Project>
