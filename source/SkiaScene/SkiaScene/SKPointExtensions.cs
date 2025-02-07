@@ -7,7 +7,7 @@ namespace SkiaScene
     {
         public static float GetMagnitude(this SKPoint point)
         {
-            return (float)Math.Sqrt(Math.Pow(point.X, 2) + Math.Pow(point.Y, 2));
+            return MathF.Sqrt(MathF.Pow(point.X, 2f) + MathF.Pow(point.Y, 2f));
         }
     }
 }
