@@ -13,8 +13,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <PropertyGroup Condition=" '$(TF_BUILD)' == 'true' OR '$(GITHUB_ACTIONS)' == 'true' ">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
