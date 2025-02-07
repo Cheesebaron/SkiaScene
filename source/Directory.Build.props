@@ -6,7 +6,7 @@
     <tags>skiascene,xamarin,graphics,ios,android,uwp,cross-platform,skiasharp</tags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -33,5 +33,9 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)\..\README.md" Pack="true" PackagePath="\" />
     <None Include="$(MSBuildThisFileDirectory)\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" PrivateAssets="All" />
   </ItemGroup>
 </Project>

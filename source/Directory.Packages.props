@@ -1,5 +1,6 @@
 <Project>
   <ItemGroup>
     <PackageVersion Include="SkiaSharp" Version="3.116.0" />
+    <PackageVersion Include="NerdBank.GitVersioning" Version="3.7.115" />
   </ItemGroup>
 </Project>
