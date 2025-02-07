@@ -48,11 +48,6 @@ jobs:
     - name: Build
       run: dotnet cake --outputDir=${{ env.OUTPUT_DIR }}
 
-    - name: Copy NuGet Packages
-      run: |
-        mkdir -p ${{ env.OUTPUT_DIR }}
-        cp -r ${{ github.workspace }}/source/**/bin/Release/*.nupkg ${{ env.OUTPUT_DIR }}
-
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
