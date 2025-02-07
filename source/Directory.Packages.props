@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageVersion Include="SkiaSharp" Version="3.116.0" />
+  </ItemGroup>
+</Project>
