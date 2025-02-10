@@ -1,4 +1,4 @@
-﻿using Android.Views;
+using Android.Views;
 using System;
 using System.Collections.Generic;
 
@@ -105,7 +105,10 @@ namespace TouchTracking.Droid
                 case MotionEventActions.PointerDown:
                     FireEvent(this, id, TouchActionType.Pressed, screenPointerCoords, true);
 
+                    if (!_idToTouchHandlerDictionary.ContainsKey(id))
+                    {
                     _idToTouchHandlerDictionary.Add(id, this);
+                    }
 
                     _capture = Capture;
 
