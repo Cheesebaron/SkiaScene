@@ -37,7 +37,7 @@ jobs:
     - name: Install .NET workloads
       run: |
         dotnet --version
-        dotnet workload install android ios maccatalyst --version ${{ env.NET_VERSION }}
+        dotnet workload install android ios maccatalyst maui --version ${{ env.NET_VERSION }}
 
     - name: Set up JDK
       uses: actions/setup-java@v4
