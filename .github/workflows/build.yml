@@ -12,7 +12,7 @@ on:
 env:
   JAVA_DISTRIBUTION: 'microsoft'
   JAVA_VERSION: 17
-  NET_VERSION: 9.0.102
+  NET_VERSION: 9.0.200
   OUTPUT_DIR: ${{ github.workspace }}/output
 
 jobs:
