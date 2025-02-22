@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{4CB34AC9-245F-4ECB-BB68-4E150F4BE55B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +149,7 @@ Global
 		{4DC6A992-335F-4016-9FDF-DB6A5CD55892} = {5EAAF631-6151-4F9B-B022-344EACF47C8B}
 		{39D92863-4CFD-434D-91E9-80625E284813} = {86604022-2CED-4F88-8A0B-B518738BBD5D}
 		{FB10DDDE-D255-43C6-AFBC-ADE51FEB5166} = {5EAAF631-6151-4F9B-B022-344EACF47C8B}
+		{4CB34AC9-245F-4ECB-BB68-4E150F4BE55B} = {0F654EA4-9F36-4366-88AD-C76F7FBA8774}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D1DB94F-B0A3-4696-ADF4-DAD4021008F6}
