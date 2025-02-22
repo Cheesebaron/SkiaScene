@@ -107,7 +107,7 @@ namespace TouchTracking.Droid
 
                     if (!_idToTouchHandlerDictionary.ContainsKey(id))
                     {
-                    _idToTouchHandlerDictionary.Add(id, this);
+                        _idToTouchHandlerDictionary.Add(id, this);
                     }
 
                     _capture = Capture;

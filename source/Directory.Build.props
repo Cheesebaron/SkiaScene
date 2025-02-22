@@ -2,7 +2,7 @@
   <PropertyGroup>
     <PackageProjectUrl>https://github.com/Cheesebaron/SkiaScene</PackageProjectUrl>
     <authors>Ondrej Kunc</authors>
-    <owners>Ondrej Kunc</owners>
+    <owners>Ondrej Kunc,Cheesebaron</owners>
     <tags>skiascene,xamarin,graphics,ios,android,uwp,cross-platform,skiasharp</tags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
