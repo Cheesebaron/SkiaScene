@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <ApplicationId>com.companyname.SkiaScene.NativeSample.Droid</ApplicationId>
+        <ApplicationVersion>1</ApplicationVersion>
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <!--
+          Enables trim analyzers and full trimming during Release mode.
+          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/trimming-options#trimming-granularity
+        -->
+        <TrimMode>full</TrimMode>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\SkiaScene\SkiaScene.TouchManipulation\SkiaScene.TouchManipulation.csproj" />
+      <ProjectReference Include="..\..\..\SkiaScene\SkiaScene\SkiaScene.csproj" />
+      <ProjectReference Include="..\..\..\TouchTracking\TouchTracking.Droid\TouchTracking.Droid.csproj" />
+      <ProjectReference Include="..\..\..\TouchTracking\TouchTracking\TouchTracking.csproj" />
+      <ProjectReference Include="..\SkiaScene.NativeSample\SkiaScene.NativeSample.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="SkiaSharp.Views" />
+    </ItemGroup>
+</Project>

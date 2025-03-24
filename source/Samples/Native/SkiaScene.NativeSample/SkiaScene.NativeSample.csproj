@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="3inline.svg" />
+    <None Remove="test.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="test.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" />
+    <PackageReference Include="Svg.Skia" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SkiaScene\SkiaScene\SkiaScene.csproj" />
+  </ItemGroup>
+
+</Project>
