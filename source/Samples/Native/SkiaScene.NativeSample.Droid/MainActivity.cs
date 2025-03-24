@@ -1,7 +1,7 @@
 ﻿using SkiaSharp.Views.Android;
 using SkiaSharp;
 using SkiaScene.TouchManipulation;
-using TouchTracking.Droid;
+using TouchTracking.Platforms.Android;
 
 namespace SkiaScene.NativeSample.Droid;
 

@@ -1,4 +1,4 @@
-using TouchTracking.Droid;
+using TouchTracking.Platforms.Android;
 
 namespace TouchTracking.MAUI.Platforms.Android;
 

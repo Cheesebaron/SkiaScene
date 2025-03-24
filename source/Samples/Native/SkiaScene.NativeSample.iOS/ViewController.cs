@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using SkiaScene.TouchManipulation;
 using SkiaSharp;
 using SkiaSharp.Views.iOS;
-using TouchTracking.iOS;
+using TouchTracking.Platforms.iOS;
 
 namespace SkiaScene.NativeSample.iOS;
 

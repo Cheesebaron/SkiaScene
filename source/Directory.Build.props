@@ -37,4 +37,20 @@
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" PrivateAssets="All" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <_SksTargetPlatformIdentifier>$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)'))</_SksTargetPlatformIdentifier>
+    <_SksTargetPlatformIsAndroid>false</_SksTargetPlatformIsAndroid>
+    <_SksTargetPlatformIsAndroid Condition="'$(_SksTargetPlatformIdentifier)' == 'android'">True</_SksTargetPlatformIsAndroid>
+    <_SksTargetPlatformIsiOS>false</_SksTargetPlatformIsiOS>
+    <_SksTargetPlatformIsiOS Condition="'$(_SksTargetPlatformIdentifier)' == 'ios'">True</_SksTargetPlatformIsiOS>
+    <_SksTargetPlatformIsMacCatalyst>false</_SksTargetPlatformIsMacCatalyst>
+    <_SksTargetPlatformIsMacCatalyst Condition="'$(_SksTargetPlatformIdentifier)' == 'maccatalyst'">True</_SksTargetPlatformIsMacCatalyst>
+    <_SksTargetPlatformIsmacOS>false</_SksTargetPlatformIsmacOS>
+    <_SksTargetPlatformIsmacOS Condition="'$(_SksTargetPlatformIdentifier)' == 'macos'">True</_SksTargetPlatformIsmacOS>
+    <_SksTargetPlatformIstvOS>false</_SksTargetPlatformIstvOS>
+    <_SksTargetPlatformIstvOS Condition="'$(_SksTargetPlatformIdentifier)' == 'tvos'">True</_SksTargetPlatformIstvOS>
+    <_SksTargetPlatformIsWindows>false</_SksTargetPlatformIsWindows>
+    <_SksTargetPlatformIsWindows Condition="$(_SksTargetPlatformIdentifier.Contains('windows')) == 'True'">True</_SksTargetPlatformIsWindows>
+  </PropertyGroup>
 </Project>

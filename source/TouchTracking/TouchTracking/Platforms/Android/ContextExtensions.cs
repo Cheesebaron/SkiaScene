@@ -2,7 +2,7 @@
 using Android.Util;
 using System;
 
-namespace TouchTracking.Droid
+namespace TouchTracking.Platforms.Android
 {
     public static class ContextExtensions
     {

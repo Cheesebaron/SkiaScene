@@ -17,7 +17,6 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\SkiaScene\SkiaScene.TouchManipulation\SkiaScene.TouchManipulation.csproj" />
       <ProjectReference Include="..\..\..\SkiaScene\SkiaScene\SkiaScene.csproj" />
-      <ProjectReference Include="..\..\..\TouchTracking\TouchTracking.Droid\TouchTracking.Droid.csproj" />
       <ProjectReference Include="..\..\..\TouchTracking\TouchTracking\TouchTracking.csproj" />
       <ProjectReference Include="..\SkiaScene.NativeSample\SkiaScene.NativeSample.csproj" />
     </ItemGroup>

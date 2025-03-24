@@ -20,14 +20,6 @@
         <ProjectReference Include="..\TouchTracking\TouchTracking.csproj" />
     </ItemGroup>
 
-    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" >
-        <ProjectReference Include="..\TouchTracking.Droid\TouchTracking.Droid.csproj" />
-    </ItemGroup>
-
-    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" >
-        <ProjectReference Include="..\TouchTracking.iOS\TouchTracking.iOS.csproj" />
-    </ItemGroup>
-
     <ItemGroup>
       <Folder Include="Platforms\MacCatalyst\" />
     </ItemGroup>
