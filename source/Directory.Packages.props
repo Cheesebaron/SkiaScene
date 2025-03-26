@@ -2,8 +2,10 @@
   <ItemGroup>
     <PackageVersion Include="SkiaSharp" Version="3.116.0" />
     <PackageVersion Include="SkiaSharp.Views" Version="3.116.0" />
+    <PackageVersion Include="SkiaSharp.Views.Maui.Controls" Version="3.116.0" />
     <PackageVersion Include="Svg.Skia" Version="2.0.0.4" />
     <PackageVersion Include="NerdBank.GitVersioning" Version="3.7.115" />
     <PackageVersion Include="Microsoft.Maui.Controls" Version="9.0.40" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3"/>
   </ItemGroup>
 </Project>

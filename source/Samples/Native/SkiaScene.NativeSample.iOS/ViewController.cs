@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using SkiaScene.Sample;
 using SkiaScene.TouchManipulation;
 using SkiaSharp;
 using SkiaSharp.Views.iOS;

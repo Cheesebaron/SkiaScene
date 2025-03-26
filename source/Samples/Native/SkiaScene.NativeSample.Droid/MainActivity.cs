@@ -1,4 +1,5 @@
-﻿using SkiaSharp.Views.Android;
+﻿using SkiaScene.Sample;
+using SkiaSharp.Views.Android;
 using SkiaSharp;
 using SkiaScene.TouchManipulation;
 using TouchTracking.Platforms.Android;

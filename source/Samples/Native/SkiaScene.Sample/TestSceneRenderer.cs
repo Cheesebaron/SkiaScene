@@ -1,7 +1,7 @@
 ﻿using SkiaSharp;
 using System.Collections.Generic;
 
-namespace SkiaScene.NativeSample
+namespace SkiaScene.Sample
 {
     public class TestSceneRenderer : ISKSceneRenderer
     {

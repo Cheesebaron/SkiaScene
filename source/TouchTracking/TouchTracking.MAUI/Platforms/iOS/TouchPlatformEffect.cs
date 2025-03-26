@@ -3,7 +3,7 @@ using UIKit;
 
 namespace TouchTracking.MAUI.Platforms.iOS;
 
-public class TouchEffect : Microsoft.Maui.Controls.Platform.PlatformEffect
+public class TouchPlatformEffect : Microsoft.Maui.Controls.Platform.PlatformEffect
 {
     private TouchHandler? _touchHandler;
     private UIView? _view;

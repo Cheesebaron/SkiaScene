@@ -2,7 +2,7 @@ using TouchTracking.Platforms.Android;
 
 namespace TouchTracking.MAUI.Platforms.Android;
 
-public class TouchEffect : Microsoft.Maui.Controls.Platform.PlatformEffect
+public class TouchPlatformEffect : Microsoft.Maui.Controls.Platform.PlatformEffect
 {
     private TouchHandler? _touchHandler;
     private global::Android.Views.View? _view;

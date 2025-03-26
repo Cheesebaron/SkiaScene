@@ -2,7 +2,7 @@
 using System.Reflection;
 using Svg.Skia;
 
-namespace SkiaScene.NativeSample
+namespace SkiaScene.Sample
 {
     public class SvgSceneRenderer : ISKSceneRenderer
     {
@@ -22,7 +22,7 @@ namespace SkiaScene.NativeSample
         private SKPicture LoadScene()
         {
             var svg = new SKSvg();
-            var fileName = $"SkiaScene.NativeSample.{_fileName}";
+            var fileName = $"SkiaScene.Sample.{_fileName}";
             var assembly = typeof(SvgSceneRenderer).GetTypeInfo().Assembly;
             var stream = assembly.GetManifestResourceStream(fileName);
             var result = svg.Load(stream!);
