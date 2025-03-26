@@ -56,7 +56,7 @@ jobs:
         path: ${{ env.OUTPUT_DIR }}
 
     - name: NuGet Push
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.NUGET_APIKEY }}
         SOURCE_URL: https://api.nuget.org/v3/index.json
