@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SkiaSharp;
 
 namespace SkiaScene
@@ -34,7 +34,7 @@ namespace SkiaScene
         {
             SKMatrix invertedMatrix;
             if (!Matrix.TryInvert(out invertedMatrix))
-            { 
+            {
                 return;
             }
             var resultPoint = invertedMatrix.MapVector(vector.X, vector.Y);
@@ -50,14 +50,14 @@ namespace SkiaScene
                 Matrix = Matrix.PreConcat(SKMatrix.CreateTranslation(-resultPoint.X, -resultPoint.Y));
             }
         }
-        
+
         public void MoveToPoint(SKPoint point)
         {
             var center = GetCenter();
             SKPoint diff = center - point;
             Matrix = Matrix.PreConcat(SKMatrix.CreateTranslation(diff.X, diff.Y));
         }
-        
+
         public void Rotate(SKPoint point, float radians)
         {
             var currentAngle = GetAngleInRadians();
@@ -76,7 +76,7 @@ namespace SkiaScene
             var scaleFactor = scale / currentScale;
             Matrix = Matrix.PreConcat(SKMatrix.CreateScale(scaleFactor, scaleFactor, point.X, point.Y));
         }
-        
+
         public void ZoomByScaleFactor(SKPoint point, float scaleFactor)
         {
             var currentScale = GetScale();
@@ -108,7 +108,7 @@ namespace SkiaScene
             }
             return invertedMatrix.MapPoint(viewPoint);
         }
-        
+
         public SKPoint GetCenter()
         {
             return GetCanvasPointFromViewPoint(ScreenCenter);
@@ -133,7 +133,7 @@ namespace SkiaScene
             var scaleX = Matrix.ScaleX;
             var skewY = Matrix.SkewY;
             var result = Math.Sqrt(scaleX * scaleX + skewY * skewY);
-            return (float) result;
+            return (float)result;
         }
     }
 }

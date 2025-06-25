@@ -1,4 +1,4 @@
-﻿namespace SkiaScene.MAUISample;
+namespace SkiaScene.MAUISample;
 
 public partial class App : Application
 {

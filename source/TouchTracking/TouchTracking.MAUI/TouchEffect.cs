@@ -1,4 +1,4 @@
-﻿namespace TouchTracking.MAUI;
+namespace TouchTracking.MAUI;
 
 public class TouchEffect : RoutingEffect
 {

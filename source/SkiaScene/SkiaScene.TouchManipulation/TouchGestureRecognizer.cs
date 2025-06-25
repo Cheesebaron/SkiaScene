@@ -1,8 +1,8 @@
-﻿using TouchTracking;
-using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using SkiaSharp;
+using TouchTracking;
 
 namespace SkiaScene.TouchManipulation
 {
@@ -22,7 +22,7 @@ namespace SkiaScene.TouchManipulation
         public event TapEventHandler OnSingleTap;
         public event PinchEventHandler OnPinch;
         public event PanEventHandler OnPan;
-        
+
         public void ProcessTouchEvent(long id, TouchActionType type, SKPoint location)
         {
             switch (type)
@@ -83,11 +83,11 @@ namespace SkiaScene.TouchManipulation
                 return;
             }
             var tapEventArgs = new TapEventArgs(point);
-            
+
             var now = DateTime.Now;
             var lastTapTime = LastTapTime;
             LastTapTime = now;
-            
+
             OnTap?.Invoke(this, tapEventArgs);
             if (now - lastTapTime < DoubleTapDelay)
             {

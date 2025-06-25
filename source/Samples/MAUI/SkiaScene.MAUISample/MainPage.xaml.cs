@@ -1,9 +1,9 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using TouchTracking;
+using System.Diagnostics.CodeAnalysis;
 using SkiaScene.Sample;
 using SkiaScene.TouchManipulation;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
+using TouchTracking;
 
 namespace SkiaScene.MAUISample;
 

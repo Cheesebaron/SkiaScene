@@ -34,7 +34,9 @@ public sealed class ViewController : UIViewController
         base.ViewDidLoad();
 
         if (_canvasView == null)
+        {
             return;
+        }
 
         _canvasView.PaintSurface += OnPaint;
         _touchHandler = new TouchHandler();
@@ -53,7 +55,9 @@ public sealed class ViewController : UIViewController
     private void OnTouch(object? sender, TouchTracking.TouchActionEventArgs args)
     {
         if (_canvasView == null)
+        {
             return;
+        }
 
         var viewPoint = args.Location;
         var point =
@@ -68,7 +72,9 @@ public sealed class ViewController : UIViewController
     private void SetSceneCenter()
     {
         if (_scene == null || _canvasView == null)
+        {
             return;
+        }
 
         var centerPoint = new SKPoint(_canvasView.CanvasSize.Width / 2, _canvasView.CanvasSize.Height / 2);
         _scene.ScreenCenter = centerPoint;

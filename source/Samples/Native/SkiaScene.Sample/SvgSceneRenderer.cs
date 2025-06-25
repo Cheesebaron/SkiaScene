@@ -1,5 +1,5 @@
-﻿using SkiaSharp;
 using System.Reflection;
+using SkiaSharp;
 using Svg.Skia;
 
 namespace SkiaScene.Sample

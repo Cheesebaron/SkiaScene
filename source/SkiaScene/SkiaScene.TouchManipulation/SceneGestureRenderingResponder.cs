@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using TouchTracking;
 
 namespace SkiaScene.TouchManipulation
@@ -8,7 +8,7 @@ namespace SkiaScene.TouchManipulation
         private readonly Action _invalidateViewAction;
 
         private const int DefaultFramesPerSecond = 30;
-        
+
         private TimeSpan _minGestureDuration = TimeSpan.FromMilliseconds(60);
         private DateTime _lastPanTime = DateTime.MinValue;
         private DateTime _lastPinchTime = DateTime.MinValue;

@@ -1,7 +1,7 @@
-﻿using SkiaScene.Sample;
-using SkiaSharp.Views.Android;
-using SkiaSharp;
+using SkiaScene.Sample;
 using SkiaScene.TouchManipulation;
+using SkiaSharp;
+using SkiaSharp.Views.Android;
 using TouchTracking.Platforms.Android;
 
 namespace SkiaScene.NativeSample.Droid;
@@ -24,7 +24,9 @@ public class MainActivity : Activity
         // and attach an event to it
         _canvasView = FindViewById<SKCanvasView>(Resource.Id.canvasView);
         if (_canvasView == null)
+        {
             return;
+        }
 
         _canvasView.PaintSurface += OnPaint;
         _touchHandler = new TouchHandler { UseTouchSlop = true };
@@ -35,7 +37,9 @@ public class MainActivity : Activity
     private void OnTouch(object? sender, TouchTracking.TouchActionEventArgs args)
     {
         if (_canvasView == null)
+        {
             return;
+        }
 
         var viewPoint = args.Location;
         var pixelPoint = new SKPoint(this.ToPixels(viewPoint.X), this.ToPixels(viewPoint.Y));
@@ -51,7 +55,9 @@ public class MainActivity : Activity
     private void SetSceneCenter()
     {
         if (_scene == null || _canvasView == null)
+        {
             return;
+        }
 
         var centerPoint = new SKPoint(
             _canvasView.CanvasSize.Width / 2,

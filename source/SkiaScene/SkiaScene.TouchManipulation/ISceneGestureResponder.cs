@@ -1,4 +1,4 @@
-﻿namespace SkiaScene.TouchManipulation
+namespace SkiaScene.TouchManipulation
 {
     public interface ISceneGestureResponder
     {

@@ -1,5 +1,5 @@
-﻿using TouchTracking;
 using SkiaSharp;
+using TouchTracking;
 
 namespace SkiaScene.TouchManipulation
 {

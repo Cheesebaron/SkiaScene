@@ -1,5 +1,5 @@
-﻿using SkiaSharp;
 using System.Collections.Generic;
+using SkiaSharp;
 
 namespace SkiaScene.Sample
 {
@@ -8,7 +8,7 @@ namespace SkiaScene.Sample
         private const int Columns = 5;
         private const int Rows = 10;
         private CachedScene _cachedScene;
-                
+
         public void Render(SKCanvas canvas, float angleInRadians, SKPoint center, float scale)
         {
             if (_cachedScene == null)

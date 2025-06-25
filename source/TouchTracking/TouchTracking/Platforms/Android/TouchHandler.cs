@@ -1,6 +1,6 @@
-using Android.Views;
 using System;
 using System.Collections.Generic;
+using Android.Views;
 
 namespace TouchTracking.Platforms.Android;
 

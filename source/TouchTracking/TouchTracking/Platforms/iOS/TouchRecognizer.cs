@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CoreGraphics;
@@ -40,7 +40,9 @@ internal sealed class TouchRecognizer : UIGestureRecognizer
             FireEvent(this, id, TouchActionType.Pressed, touch, true);
 
             if (!IdToTouchDictionary.ContainsKey(id))
+            {
                 IdToTouchDictionary.Add(id, this);
+            }
         }
 
         // Save the setting of the Capture property

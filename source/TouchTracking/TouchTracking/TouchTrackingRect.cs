@@ -1,4 +1,4 @@
-﻿namespace TouchTracking
+namespace TouchTracking
 {
     public struct TouchTrackingRect
     {

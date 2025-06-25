@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SkiaSharp;
 using TouchTracking;
 
@@ -36,7 +36,9 @@ namespace SkiaScene.TouchManipulation
         protected virtual void TouchGestureRecognizerOnPinch(object sender, PinchEventArgs args)
         {
             if (args.TouchActionType != TouchActionType.Moved)
+            {
                 return;
+            }
 
             var previousPoint = args.PreviousPoint;
             var newPoint = args.NewPoint;
@@ -57,7 +59,7 @@ namespace SkiaScene.TouchManipulation
                 oldVector.X = magnitudeRatio * newVector.X;
                 oldVector.Y = magnitudeRatio * newVector.Y;
             }
-            else if (TouchManipulationMode == TouchManipulationMode.IsotropicScale 
+            else if (TouchManipulationMode == TouchManipulationMode.IsotropicScale
                 && EnableTwoFingersPanInIsotropicScaleMode)
             {
                 float angle = GetAngleBetweenVectors(oldVector, newVector);
@@ -65,7 +67,7 @@ namespace SkiaScene.TouchManipulation
                 // Calculate the movement as a distance between old vector and a new vector
                 // but in orthogonal direction to the old vector.
 
-                float oldVectorOriginPoint = newVector.GetMagnitude() * (float) Math.Cos(angle);
+                float oldVectorOriginPoint = newVector.GetMagnitude() * (float)Math.Cos(angle);
                 float magnitudeRatio = oldVectorOriginPoint / oldVector.GetMagnitude();
                 SKPoint oldVectorOrigin = new SKPoint(oldVector.X * magnitudeRatio, oldVector.Y * magnitudeRatio);
                 SKPoint moveVector = newVector - oldVectorOrigin;
@@ -85,7 +87,9 @@ namespace SkiaScene.TouchManipulation
         protected virtual void TouchGestureRecognizerOnPan(object sender, PanEventArgs args)
         {
             if (args.TouchActionType != TouchActionType.Moved)
+            {
                 return;
+            }
 
             SKPoint resultVector = args.NewPoint - args.PreviousPoint;
             _skScene.MoveByVector(resultVector);
